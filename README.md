@@ -16,10 +16,10 @@ $ npm install
 ```bash
 $ cat gfm_code.text 
 
-  ``` js
-  var a = 'hello';
-  console.log(a + ' world');
-  ```
+\`\`\` js
+var a = 'hello';
+console.log(a + ' world');
+\`\`\`
 
 $ marked --gfm --color gfm_code.text 
 <pre><code class="language-js"><span class="keyword" style="color:#333;font-weight:bold;">var</span> a = <span class="string" style="color:#d14;">'hello'</span>;
