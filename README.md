@@ -43,7 +43,7 @@ Then add the code below to your vim profile, you can find it at `$HOME/.vimrc`
 nnoremap <leader>md :call Markdown()<CR>
 function! Markdown()
    exe "!cat " . shellescape(expand('%:p'), 1) . " | marked --gfm --color | xclip"
-
+endfunction
 ```
 Now, you can use command `<leader>md` to have the converted html contents directly copied into your system clipboard.
 
