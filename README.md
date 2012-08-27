@@ -3,7 +3,7 @@
 
 Markdown parser with code hightlight form [highlight.js](https://github.com/isagalaev/highlight.js) and optional inline color support. It could be useful when you want to colorful your code in your email.
 
-I'm using [css-parse](https://github.com/visionmedia/node-css-parse) to parse the style file and [cheerio](git://github.com/MatthewMueller/cheerio.git) to add the inline style.
+I'm using [css-parse](https://github.com/visionmedia/node-css-parse) to parse the style file and [cheerio](https://github.com/MatthewMueller/cheerio) to add the inline style.
 
 # install
 - - -
