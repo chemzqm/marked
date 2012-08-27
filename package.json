@@ -11,5 +11,6 @@
   "homepage": "https://github.com/chjj/marked",
   "bugs": { "url": "http://github.com/chjj/marked/issues" },
   "keywords": [ "markdown", "markup", "html" ],
+  "dependencies": { "highlight.js": "7.1", "css-parser": "1.0.1", "cheerio":"0.9.2" },
   "tags": [ "markdown", "markup", "html" ]
 }
