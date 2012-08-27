@@ -19,7 +19,7 @@ $ cat gfm_code.text
 ``` js
 var a = 'hello';
 console.log(a + ' world');
-\``` 
+`` 
 
 $ marked --gfm --color gfm_code.text 
 <pre><code class="language-js"><span class="keyword" style="color:#333;font-weight:bold;">var</span> a = <span class="string" style="color:#d14;">'hello'</span>;
@@ -29,9 +29,9 @@ console.log(a + <span class="string" style="color:#d14;">' world'</span>);</code
 # For vim users
 For convert the file content of markdown into html and copy them to your system clipboard, you can make an alias in your `vimrc` file. For example, if you are using vim (like me) under terminal, you have to install a terminal tool `xclip` at first, in the debain system, you can do that like this:
 
-```
+``` bash
     sudo apt-get install xclip
-``
+```
 Then add the code below to your vim profile, you can find it at `$HOME/.vimrc` 
 
 ``` viml
