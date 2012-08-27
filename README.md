@@ -10,6 +10,7 @@ I'm using [css-parse](https://github.com/visionmedia/node-css-parse) to parse th
 
 ```bash
 $ git clone git@github.com:chemzqm/marked.git
+$ cd marked
 $ npm install
 ```
 
