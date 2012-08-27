@@ -28,6 +28,7 @@ $ marked --gfm --color gfm_code.text
 <pre><code class="language-js"><span class="keyword" style="color:#333;font-weight:bold;">var</span> a = <span class="string" style="color:#d14;">'hello'</span>;
 console.log(a + <span class="string" style="color:#d14;">' world'</span>);</code></pre></span></span></span></code></pre>
 ```
+Get more information from [marked](https://github.com/chjj/marked)
 
 # For vim users
 - - -
