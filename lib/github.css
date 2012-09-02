@@ -1,7 +1,13 @@
 pre code {
-  display: block; padding: 0.5em;
+  margin: 15px 0;
   color: #333;
-  background: #f8f8ff
+  background-color: #F8F8F8;
+  border: 1px solid #CCC;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
 }
 
 pre .comment,
