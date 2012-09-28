@@ -41,10 +41,7 @@ For convert the file content of markdown into html and copy them to your system 
 Then add the code below to your vim profile, you can find it at `$HOME/.vimrc` 
 
 ``` viml
-nnoremap <leader>md :call Markdown()<CR>
-function! Markdown()
-   exe "!cat " . shellescape(expand('%:p'), 1) . " | marked --gfm --color | xclip"
-endfunction
+nnoremap <leader>md :w !marked --gfm --color \| xclip<cr>
 ```
 Now, you can use command `<leader>md` to have the converted html contents directly copied into your system clipboard.
 
