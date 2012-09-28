@@ -47,6 +47,5 @@ Now, you can use command `<leader>md` to have the converted html contents direct
 
 # LICENSE
 - - -
-Copyright (c) 2011-2012, Christopher Jeffrey. (MIT License)
 
-See LICENSE for more info.
+MIT
