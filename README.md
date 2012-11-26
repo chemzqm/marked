@@ -37,7 +37,7 @@ Get more information from [marked](https://github.com/chjj/marked)
 ## Browser support
 
 * *No inline parse* in browser environment, import css file is required to display colors.
-* Import highlight.js file before marked.js file and make sure function *highlight.highlight* is availabel for converting.
+* Import highlight.js file before marked.js file and make sure function `window.hljs` is availabel for converting.
 * Use function `marked(src, option)` for markdown converting.
 * Options `gfm` and `color` is enabled by default.
 
