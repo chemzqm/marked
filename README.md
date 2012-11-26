@@ -1,21 +1,24 @@
 # marked
-- - -
 
 Markdown parser with code hightlight form [highlight.js](https://github.com/isagalaev/highlight.js) and optional inline color support. It could be useful when you want to colorful your code in your email.
 
 I'm using [css-parse](https://github.com/visionmedia/node-css-parse) to parse the style file and [cheerio](https://github.com/MatthewMueller/cheerio) to add the inline style.
 
-# install
-- - -
+## install
 
-```bash
-$ git clone git@github.com:chemzqm/marked.git
-$ cd marked
-$ npm install
-```
+* from npm
+  ```bash
+  npm install -g color-marked
+  ```
 
-# example
-- - -
+* from source code
+  ```bash
+  $ git clone git@github.com:chemzqm/marked.git
+  $ cd marked
+  $ npm install
+  ```
+
+## example
 
 ```bash
 $ cat gfm_code.text 
@@ -31,8 +34,15 @@ console.log(a + <span class="string" style="color:#d14;">' world'</span>);</code
 ```
 Get more information from [marked](https://github.com/chjj/marked)
 
-# For vim users
-- - -
+## Browser support
+
+* *No inline parse* in browser environment, import css file is required to display colors.
+* Import highlight.js file before marked.js file and make sure function *highlight.highlight* is availabel for converting.
+* Use function `marked(src, option)` for markdown converting.
+* Options `gfm` and `color` is enabled by default.
+
+## For vim users
+
 For convert the file content of markdown into html and copy them to your system clipboard, you can make an alias in your `vimrc` file. For example, if you are using vim (like me) under terminal, you have to install a terminal tool `xclip` at first, in the debain system, you can do that like this:
 
 ``` bash
@@ -45,7 +55,6 @@ nnoremap <leader>md :w !marked --gfm --color \| xclip<cr>
 ```
 Now, you can use command `<leader>md` to have the converted html contents directly copied into your system clipboard.
 
-# LICENSE
-- - -
+## LICENSE
 
 MIT
