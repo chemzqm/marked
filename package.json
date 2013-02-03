@@ -2,7 +2,7 @@
   "name": "color-marked",
   "description": "markdown parser with highlight and inline code style support, useful for writing email with markdown",
   "author": "qiming zhao",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "main": "./index.js",
   "bin": "./bin/marked",
   "man": "./man/marked.1",
@@ -12,5 +12,6 @@
   "bugs": { "url": "http://github.com/chemzqm/marked/issues" },
   "dependencies": { "highlight.js": "7.1.0", "css-parse": "1.0.1", "cheerio":"0.9.2" },
   "keywords": [ "markdown", "markup", "html" , "highlight" , "email" ],
-  "tags": [ "markdown", "markup", "html" ]
+  "tags": [ "markdown", "markup", "html" ],
+  "scripts": { "test": "node test", "bench": "node test --bench" }
 }
