@@ -5,7 +5,7 @@ var fs = require('fs')
   , marked = require('../')
   , dir = __dirname + '/tests';
 
-marked.setOptions({color:false});
+marked.setOptions({color:false,langPrefix:'lang-'});
 var BREAK_ON_ERROR = false;
 
 var files;
