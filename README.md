@@ -18,7 +18,7 @@ I'm using [css-parse](https://github.com/visionmedia/node-css-parse) to parse th
   $ npm install
   ```
 
-## example
+## Usage
 
 ```bash
 $ cat gfm_code.text 
@@ -41,19 +41,20 @@ Get more information from [marked](https://github.com/chjj/marked)
 * Use function `marked(src, option)` for markdown converting.
 * Options `gfm` and `color` is enabled by default.
 
-## For vim users
+marked has a few different switches which change behavior.
 
-For convert the file content of markdown into html and copy them to your system clipboard, you can make an alias in your `vimrc` file. For example, if you are using vim (like me) under terminal, you have to install a terminal tool `xclip` at first, in the debain system, you can do that like this:
-
-``` bash
-    sudo apt-get install xclip
-```
-Then add the code below to your vim profile, you can find it at `$HOME/.vimrc` 
-
-``` viml
-nnoremap <leader>md :w !marked --gfm --color \| xclip<cr>
-```
-Now, you can use command `<leader>md` to have the converted html contents directly copied into your system clipboard.
+- __pedantic__: Conform to obscure parts of `markdown.pl` as much as possible.
+  Don't fix any of the original markdown bugs or poor behavior.
+- __gfm__: Enable github flavored markdown (enabled by default).
+- __sanitize__: Sanitize the output. Ignore any HTML that has been input.
+- __highlight__: A callback to highlight code blocks.
+- __tables__: Enable GFM tables. This is enabled by default. (Requires the
+  `gfm` option in order to be enabled).
+- __breaks__: Enable GFM line breaks. Disabled by default.
+- __smartLists__: Use smarter list behavior than the original markdown.
+  Disabled by default. May eventually be default with the old behavior
+  moved into `pedantic`.
+- __langPrefix__: Set the prefix for code block classes. Defaults to `lang-`.
 
 ## LICENSE
 
