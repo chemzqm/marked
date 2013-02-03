@@ -2,9 +2,10 @@
 
 var fs = require('fs')
   , path = require('path')
-  , marked = require('marked')
+  , marked = require('../')
   , dir = __dirname + '/tests';
 
+marked.setOptions({color:false});
 var BREAK_ON_ERROR = false;
 
 var files;
