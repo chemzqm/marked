@@ -2,8 +2,12 @@ pre code {
   display: block; padding: 0.5em;
   background: #272822;
   color: #F8F8F2;
+  font-family: Verdana,sans-serif;
+  font-size: 15px;
+  padding: 1em!important;
+  border-radius: 1em;
+  display: block;
 }
-
 pre .tag,
 pre .tag .title,
 pre .keyword,
