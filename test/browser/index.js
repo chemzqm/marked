@@ -1,10 +1,11 @@
 var fs = require('fs');
 
-var main = require('../')
-  , load = main.load;
+var test = require('../')
+  , runTests = test.runTests
+  , load = test.load;
 
 var express = require('express')
-  , app = express.createServer();
+  , app = express();
 
 app.use(function(req, res, next) {
   var setHeader = res.setHeader;
@@ -28,7 +29,7 @@ app.get('/test.js', function(req, res, next) {
     , files = load();
 
   test = test.replace('__TESTS__', JSON.stringify(files));
-  test = test.replace('__MAIN__', main + '');
+  test = test.replace('__MAIN__', runTests + '');
 
   res.contentType('.js');
   res.send(test);
