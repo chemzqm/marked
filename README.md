@@ -23,49 +23,28 @@ I'm using [css-parse](https://github.com/visionmedia/node-css-parse) to parse th
 ```bash
 $ cat gfm_code.text 
 
-<<<<<<< .merge_file_oYFd59
 ``` js
 var a = 'hello';
 console.log(a + ' world');
 `` 
-=======
-node v0.8.x
-
-``` bash
-$ node test --bench
-marked completed in 3411ms.
-marked (gfm) completed in 3727ms.
-marked (pedantic) completed in 3201ms.
-robotskirt completed in 808ms.
-showdown (reuse converter) completed in 11954ms.
-showdown (new converter) completed in 17774ms.
-markdown-js completed in 17191ms.
-```
-
-## Install
->>>>>>> .merge_file_XVIES6
 
 $ marked --gfm --color gfm_code.text 
-<pre><code class="language-js"><span class="keyword" style="color:#333;font-weight:bold;">var</span> a = <span class="string" style="color:#d14;">'hello'</span>;
-console.log(a + <span class="string" style="color:#d14;">' world'</span>);</code></pre></span></span></span></code></pre>
+<pre><code style="display:block;padding:0.5em;color:#333;background:#f8f8ff;"><span class="keyword" style="color:#333;font-weight:bold;">var</span> a = <span class="string" style="color:#d14;">'hello'</span>;
+console.log(a + <span class="string" style="color:#d14;">' world'</span>);</code></pre>
+
 ```
 Get more information from [marked](https://github.com/chjj/marked)
 
 ## Browser support
 
-* *No inline parse* in browser environment, import css file is required to display colors.
-* Import highlight.js file before marked.js file and make sure function `window.hljs` is availabel for converting.
+* color is disabed in browser environment, import css file is required to display colors.
+* When used in browser, import highlight.js file before marked.js file and make sure function `window.hljs` is availabel for converting.
 * Use function `marked(src, option)` for markdown converting.
-* Options `gfm` and `color` is enabled by default.
+* `color` option is enabled by default in none browser environment.
 
-<<<<<<< .merge_file_oYFd59
-=======
-Along with implementing every markdown feature, marked also implements
-[GFM features](http://github.github.com/github-flavored-markdown/).
 
 ## Options
 
->>>>>>> .merge_file_XVIES6
 marked has a few different switches which change behavior.
 
 - __pedantic__: Conform to obscure parts of `markdown.pl` as much as possible.
@@ -79,70 +58,12 @@ marked has a few different switches which change behavior.
 - __smartLists__: Use smarter list behavior than the original markdown.
   Disabled by default. May eventually be default with the old behavior
   moved into `pedantic`.
-- __langPrefix__: Set the prefix for code block classes. Defaults to `lang-`.
+- __langPrefix__: Set the prefix for code block classes. Defaults to `language-`.
+- __color__: Parse style.css file and add the styles to highlight block
 
-<<<<<<< .merge_file_oYFd59
-## LICENSE
-=======
-## Usage
-
-``` js
-// Set default options
-marked.setOptions({
-  gfm: true,
-  tables: true,
-  breaks: false,
-  pedantic: false,
-  sanitize: true,
-  smartLists: true,
-  langPrefix: 'language-',
-  highlight: function(code, lang) {
-    if (lang === 'js') {
-      return highlighter.javascript(code);
-    }
-    return code;
-  }
-});
-console.log(marked('i am using __markdown__.'));
-```
-
-You also have direct access to the lexer and parser if you so desire.
-
-``` js
-var tokens = marked.lexer(text, options);
-console.log(marked.parser(tokens));
-```
-
-``` js
-var lexer = new marked.Lexer(options);
-var tokens = lexer.lex(text);
-console.log(tokens);
-console.log(lexer.rules);
-```
-
-``` bash
-$ node
-> require('marked').lexer('> i am using marked.')
-[ { type: 'blockquote_start' },
-  { type: 'paragraph',
-    text: 'i am using marked.' },
-  { type: 'blockquote_end' },
-  links: {} ]
-```
-
-## CLI
-
-``` bash
-$ marked -o hello.html
-hello world
-^D
-$ cat hello.html
-<p>hello world</p>
-```
 
 ## License
 
-Copyright (c) 2011-2013, Christopher Jeffrey. (MIT License)
->>>>>>> .merge_file_XVIES6
+Copyright (c) 2011-2013, Qiming Zhao. (MIT License)
 
 MIT
