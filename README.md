@@ -18,7 +18,7 @@ I'm using [css-parse](https://github.com/visionmedia/node-css-parse) to parse th
   $ npm install
   ```
 
-## Usage
+## Command line Usage
 
 ```bash
 $ cat gfm_code.text 
@@ -60,7 +60,56 @@ marked has a few different switches which change behavior.
   moved into `pedantic`.
 - __langPrefix__: Set the prefix for code block classes. Defaults to `language-`.
 - __color__: Parse style.css file and add the styles to highlight block
+- __smartypants__: Use "smart" typograhic punctuation for things like quotes
+  and dashes.
+- __langPrefix__: Set the prefix for code block classes. Defaults to `lang-`.
 
+## Javascript API usage
+
+``` js
+// Set default options
+marked.setOptions({
+  gfm: true,
+  tables: true,
+  breaks: false,
+  pedantic: false,
+  sanitize: true,
+  smartLists: true,
+  smartypants: false,
+  langPrefix: 'language-',
+  highlight: function(code, lang) {
+    if (lang === 'js') {
+      return highlighter.javascript(code);
+    }
+    return code;
+  }
+});
+console.log(marked('i am using __markdown__.'));
+```
+
+You also have direct access to the lexer and parser if you so desire.
+
+``` js
+var tokens = marked.lexer(text, options);
+console.log(marked.parser(tokens));
+```
+
+``` js
+var lexer = new marked.Lexer(options);
+var tokens = lexer.lex(text);
+console.log(tokens);
+console.log(lexer.rules);
+```
+
+``` bash
+$ node
+> require('marked').lexer('> i am using marked.')
+[ { type: 'blockquote_start' },
+  { type: 'paragraph',
+    text: 'i am using marked.' },
+  { type: 'blockquote_end' },
+  links: {} ]
+```
 
 ## License
 
