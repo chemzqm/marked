@@ -1,10 +1,14 @@
 {
   "name": "marked",
   "version": "0.2.9",
-  "repo": "chjj/marked",
-  "description": "A markdown parser built for speed",
+  "repo": "chemzqm/marked",
+  "description": "A highlight markdown parser built for speed",
   "keywords": ["markdown", "markup", "html"],
   "scripts": ["lib/marked.js"],
+  "styles": ["marked.css"],
   "main": "lib/marked.js",
+  "dependencies": {
+    "chemzqm/highlight.js": "*"
+  },
   "license": "MIT"
 }

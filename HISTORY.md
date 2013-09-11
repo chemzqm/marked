@@ -6,3 +6,4 @@
 
 * add `colorscheme` option, use the filename of the css file in styles folder as argument.
 
+* add component support

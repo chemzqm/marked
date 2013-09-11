@@ -1,12 +1,15 @@
-all:
-	@cp lib/marked.js marked.js
-	@uglifyjs -o marked.min.js marked.js
+
+build: components lib/marked.js marked.css
+	@component build --dev
+	@touch build
+
+start:
+	@component serve &
+
+components: component.json
+	@component install --dev
 
 clean:
-	@rm marked.js
-	@rm marked.min.js
+	rm -fr build components template.js
 
-bench:
-	@node test --bench
-
-.PHONY: clean all
+.PHONY: clean start
