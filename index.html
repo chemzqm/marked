@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example of marked</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="build/build.js"></script>
+    <link rel="stylesheet" href="build/build.css" />
+    <style>
+      body {
+        padding:100px;
+      }
+      #result {
+        width: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="text" name="" id="" cols="50" rows="13">
+**Note** this could only be used for __component__.
+``` js
+var marked = require('marked');
+var el = document.getElementById('text');
+var text = el.value;
+var res = marked(text);
+//value language
+var result = document.getElementById('result');
+result.innerHTML = res;
+```
+    </textarea>
+    <div id="result">
+    </div>
+
+    <script>
+      var marked = require('marked');
+      var el = document.getElementById('text');
+      var text = el.value;
+      var res = marked(text);
+      //value language
+      var result = document.getElementById('result');
+      result.innerHTML = res;
+    </script>
+  </body>
+</html>
