@@ -21,6 +21,23 @@ Addtional options include `color` and `colorscheme`
 
 * Use function `marked(src, option)` for markdown converting.
 
+## Component support
+
+Install by using [component](https://github.com/component/component) command.
+
+Syntax highlight is enable by default, default colorscheme is `solarized_light`.
+
+    component install chemzqm/marked
+
+**Usage Example:**
+
+``` js
+var marked = require('marked');
+console.log(marked('**This** is marked for [component](http://component.io/)'));
+```
+
+[demo](http://chemzqm.github.io/marked/index.html)
+
 ## Javascript API usage
 
 ``` js
