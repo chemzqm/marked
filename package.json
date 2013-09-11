@@ -9,18 +9,33 @@
   "preferGlobal": false,
   "repository": "git@github.com:chemzqm/marked.git",
   "homepage": "https://github.com/chemzqm/marked",
-  "bugs": { "url": "http://github.com/chemzqm/marked/issues" },
-  "dependencies": { 
+  "bugs": {
+    "url": "http://github.com/chemzqm/marked/issues"
+  },
+  "dependencies": {
     "highlight.js": "~7.3.0",
     "css-parse": "~1.2.0",
-    "cheerio":"~0.10.8"
+    "cheerio": "~0.10.8"
   },
-  "keywords": [ "markdown", "markup", "html" , "highlight" , "email" ],
-  "tags": [ "markdown", "markup", "html" ],
+  "keywords": [
+    "markdown",
+    "markup",
+    "html",
+    "highlight",
+    "email"
+  ],
+  "tags": [
+    "markdown",
+    "markup",
+    "html"
+  ],
   "devDependencies": {
     "markdown": "*",
     "showdown": "*",
     "robotskirt": "*"
   },
-  "scripts": { "test": "node test", "bench": "node test --bench" }
+  "scripts": {
+    "test": "node test",
+    "bench": "node test --bench"
+  }
 }
