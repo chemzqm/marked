@@ -2,7 +2,7 @@
   "name": "color-marked",
   "description": "markdown parser with highlight and inline code style support, useful for writing email with markdown",
   "author": "qiming zhao",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "main": "./index.js",
   "bin": "./bin/marked",
   "man": "./man/marked.1",
